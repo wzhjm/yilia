@@ -2,10 +2,10 @@
 <div class="sidebar" :class="{ 'full-height': menuVisible }">
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
-      <a class="site-title-container" href="<%= themeConfig.domain %>">
-        <img src="<%= themeConfig.domain %>/images/avatar.png?v=<%= site.utils.now %>" class="site-logo">
-        <h1 class="site-title"><%= themeConfig.siteName %></h1>
+      <a class="profilepic" href="/">
+        <img src="<%= themeConfig.domain %>/images/avatar.png?v=<%= site.utils.now %>">
       </a>
+      <h1 class="site-title"><%= themeConfig.siteName %></h1>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
         <div class="line"></div>
       </div>
