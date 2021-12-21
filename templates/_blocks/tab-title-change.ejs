@@ -1,0 +1,18 @@
+<% if (site.customConfig.tab_title_change) { %>
+<script>
+  /* 标签页标题切换 */
+  var originTitle = document.title;
+  var titleTime;
+  document.addEventListener("visibilitychange", function () {
+    if (document.hidden) {
+      document.title = "<%- site.customConfig.left_tab_title %>" + originTitle;
+      clearTimeout(titleTime);
+    } else {
+      document.title = "<%- site.customConfig.return_tab_title %>" + originTitle;
+      titleTime = setTimeout(function () {
+        document.title = originTitle;
+      }, 2000);
+    }
+  });
+</script>
+<% } %>

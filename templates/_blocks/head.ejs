@@ -27,6 +27,8 @@
   <script src="<%= themeConfig.domain %>/media/lib/clickLove.js %>"></script>
 <% } %>
 
+<%- include('./tab-title-change') %>
+
 <% if (site.customConfig.ga) { %>
 <script async src="https://www.googletagmanager.com/gtag/js?id=<%= site.customConfig.ga %>"></script>
 <script>

@@ -114,6 +114,29 @@
       "group": "页面点击小红心",
       "value": false,
       "type": "switch"
+    },
+    {
+      "name": "tab_title_change",
+      "label": "启用",
+      "group": "标签栏自定义",
+      "value": false,
+      "type": "switch"
+    },
+    {
+      "name": "return_tab_title",
+      "label": "显示状态",
+      "group": "标签栏自定义",
+      "value": "(*´∇｀*) 被你发现啦~ ",
+      "type": "input",
+      "note": ""
+    },
+    {
+      "name": "left_tab_title",
+      "label": "隐藏状态",
+      "group": "标签栏自定义",
+      "value": "(つェ⊂) 我藏好了哦~ ",
+      "type": "input",
+      "note": ""
     }
   ]
 }
