@@ -433,11 +433,29 @@ a {
   }
 
   .post {
-    padding-bottom: 16px;
+    margin-bottom: 16px;
+    min-height: 140px;
+    background: #fff;
+
+    .article-header {
+      border-left: 5px solid #4d4d4d;
+      padding-left: 2%;
+      height: 80px;
+      display: flex;
+      align-items: center;
+    }
+
+    .tag-container {
+      padding-left: 2%;
+    }
 
     .post-title {
-      font-size: 18px;
+      font-size: 24px;
       transition: all 0.3s;
+
+      @media (max-width: 800px) {
+        font-size: 16px;
+      }
 
       &:hover {
         color: @oc-gray-9;

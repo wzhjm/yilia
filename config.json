@@ -137,6 +137,24 @@
       "value": "(つェ⊂) 我藏好了哦~ ",
       "type": "input",
       "note": ""
+    },
+    
+    {
+      "name": "changyan_appid",
+      "label": "appid",
+      "group": "畅言",
+      "value": "",
+      "type": "input",
+      "note": ""
+    },
+    {
+      "name": "changyan_conf",
+      "label": "conf",
+      "group": "畅言",
+      "value": "",
+      "type": "input",
+      "note": ""
     }
+    
   ]
 }

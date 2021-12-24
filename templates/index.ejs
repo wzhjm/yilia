@@ -1,56 +1,59 @@
 <!-- 首页右侧 -->
 <!DOCTYPE html>
 <html>
-  <head>
-    <%- include('./_blocks/head', { siteTitle: themeConfig.siteName }) %>
-    <meta name="description" content="<%= themeConfig.siteDescription %>">
-    <% if (site.customConfig.renderKaTeX) { %>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-    <% } %>
-  </head>
-  <body>
-    <div id="app" class="main">
 
-      <%- include('./_blocks/sidebar') %>
+<head>
+  <%- include('./_blocks/head', { siteTitle: themeConfig.siteName }) %>
+  <meta name="description" content="<%= themeConfig.siteDescription %>">
+  <% if (site.customConfig.renderKaTeX) { %>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+  <% } %>
+</head>
 
-      <div class="main-container">
-        <div class="content-container" data-aos="fade-up">
-          <% posts.forEach(function(post) { %>
-            <article class="post-item">
-              <div class="left">
-                <div class="article-header">
-                  <a href="<%= post.link %>">
-                    <h2 class="post-title"><%= post.title %></h2>
-                  </a>
-                  <div class="post-date">
-                    <%= post.dateFormat %>
-                  </div>
-                </div>
-                <div class="post-abstract">
-                  <%- post.abstract %>
-                </div>
-                <div class="tag-container">
-                  <% post.tags.forEach(function(tag, index) { %>
-                    <a href="<%= tag.link %>" class="tag">
-                      <%= tag.name %>
-                    </a>
-                  <% }); %>
+<body>
+  <div id="app" class="main">
+
+    <%- include('./_blocks/sidebar') %>
+
+    <div class="main-container">
+      <div class="content-container" data-aos="fade-up">
+        <% posts.forEach(function(post) { %>
+        <article class="post-item">
+          <div class="left">
+            <div class="article-header">
+              <a href="<%= post.link %>">
+                <h2 class="post-title"><%= post.title %></h2>
+              </a>
+              <div class="post-date">
+                <%= post.dateFormat %>
               </div>
-              </div>
-              <% if (themeConfig.showFeatureImage && post.feature) { %>
-                <a class="right" href="<%= post.link %>">
-                  <div class="feature-container" style="background-image: url('<%= post.feature %>')">
-                  </div>
-                </a>
-              <% } %>
-            </article>
-          <% }); %>
+            </div>
+            <div class="post-abstract">
+              <%- post.abstract %>
+            </div>
+            <div class="tag-container">
+              <% post.tags.forEach(function(tag, index) { %>
+              <a href="<%= tag.link %>" class="tag">
+                <%= tag.name %>
+              </a>
+              <% }); %>
+            </div>
+          </div>
+          <% if (themeConfig.showFeatureImage && post.feature) { %>
+          <a class="right" href="<%= post.link %>">
+            <div class="feature-container" style="background-image: url('<%= post.feature %>')">
+            </div>
+          </a>
+          <% } %>
+        </article>
+        <% }); %>
 
-          <%- include('./_blocks/pagination') %>
-        </div>
+        <%- include('./_blocks/pagination') %>
       </div>
     </div>
+  </div>
 
-    <%- include('./_blocks/scripts') %>
-  </body>
+  <%- include('./_blocks/scripts') %>
+</body>
+
 </html>

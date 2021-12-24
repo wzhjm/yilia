@@ -33,6 +33,11 @@
             <% }); %>
           </div>
           <% } %>
+
+          <% if (site.customConfig.changyan_appid && site.customConfig.changyan_conf) { %>
+          <%- include('./_blocks/changyan') %>
+          <% } %>
+
           <div class="next-post">
             <div>
               <% if (post.prevPost && !post.hideInList) { %>
