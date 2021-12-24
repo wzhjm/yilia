@@ -29,6 +29,13 @@
                 <div class="post-abstract">
                   <%- post.abstract %>
                 </div>
+                <div class="tag-container">
+                  <% post.tags.forEach(function(tag, index) { %>
+                    <a href="<%= tag.link %>" class="tag">
+                      <%= tag.name %>
+                    </a>
+                  <% }); %>
+              </div>
               </div>
               <% if (themeConfig.showFeatureImage && post.feature) { %>
                 <a class="right" href="<%= post.link %>">

@@ -141,10 +141,12 @@ a {
     position: relative;
     background: #fff;
     transition: all .2s ease-in;
+    min-height: 144px;
 
     .article-header {
       border-left: 5px solid #4d4d4d;
       padding-left: 2%;
+      height: 80px;
 
       display: flex;
       justify-content: space-between;
@@ -164,13 +166,16 @@ a {
         color: @oc-gray-5;
         margin-right: 2%;
       }
+    }
 
+    .post-abstract {
+      line-height: 24px;
+      font-size: 18px;
+      color: @oc-gray-6;
+    }
 
-      .post-abstract {
-        line-height: 24px;
-        font-size: 18px;
-        color: @oc-gray-6;
-      }
+    .tag-container {
+      padding-left: 2%;
     }
   }
 
@@ -387,17 +392,24 @@ a {
 
 .next-post {
   border-top: 1px solid @oc-gray-4;
-  border-bottom: 1px solid @oc-gray-4;
   padding: 24px 0;
   margin: 32px 0;
+  display: flex;
+  justify-content: space-between;
 
   .post-title {
     font-size: 24px;
   }
 
+  .prev {
+    color: @oc-gray-4;
+    margin-bottom: 16px;
+  }
+
   .next {
     color: @oc-gray-4;
     margin-bottom: 16px;
+    text-align: right;
   }
 }
 
@@ -602,6 +614,12 @@ a {
   .next-post {
     margin: 24px 0;
     padding: 16px 0;
+    display: block;
+
+    .next {
+      text-align: left;
+      margin-top: 16px;
+    }
   }
 
   .archives-title,
