@@ -75,6 +75,10 @@
     </div>
   </div>
   <%- include('./_blocks/scripts') %>
+
+  <% if (site.customConfig.changyan_appid && site.customConfig.changyan_conf) { %>
+  <%- include('./_blocks/changyan') %>
+  <% } %>
 </body>
 
 </html>
