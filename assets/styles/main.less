@@ -123,16 +123,14 @@ a {
 }
 
 .content-container {
-  max-width: 1064px;
+  // max-width: 1064px;
   margin: 0 auto;
   padding: 48px 32px;
 }
 
 .post-item {
   display: flex;
-  padding-bottom: 32px;
-  margin-bottom: 32px;
-  border-bottom: 1px solid @oc-gray-4;
+  margin: 30px;
 
   &:last-of-type {
     border-bottom: none;
@@ -140,26 +138,39 @@ a {
 
   .left {
     flex: 1;
+    position: relative;
+    background: #fff;
+    transition: all .2s ease-in;
 
-    .post-title {
-      font-size: 24px;
-      transition: all 0.3s;
+    .article-header {
+      border-left: 5px solid #4d4d4d;
+      padding-left: 2%;
 
-      &:hover {
-        color: @oc-gray-9;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .post-title {
+        font-size: 24px;
+        transition: all 0.3s;
+
+        &:hover {
+          color: @oc-gray-9;
+        }
       }
-    }
 
-    .post-date {
-      font-size: 18px;
-      padding: 24px 0;
-      color: @oc-gray-5;
-    }
+      .post-date {
+        font-size: 18px;
+        color: @oc-gray-5;
+        margin-right: 2%;
+      }
 
-    .post-abstract {
-      line-height: 24px;
-      font-size: 18px;
-      color: @oc-gray-6;
+
+      .post-abstract {
+        line-height: 24px;
+        font-size: 18px;
+        color: @oc-gray-6;
+      }
     }
   }
 
@@ -199,7 +210,7 @@ a {
 }
 
 .post-detail {
-  max-width: 720px;
+  // max-width: 720px;
   margin: 0 auto;
 
   .feature-container {
@@ -448,7 +459,7 @@ a {
     .top-header-container {
       display: flex;
       justify-content: space-between;
-      margin-top: 16px;
+      align-items: center;
 
       .menu-btn {
         display: block;
@@ -492,6 +503,12 @@ a {
       text-align: left;
       padding: 0 16px;
 
+      .profilepic {
+        height: 60px;
+        width: 60px;
+        margin: 10px 0;
+      }
+
       .site-title-container {
         display: flex;
         align-items: center;
@@ -522,7 +539,7 @@ a {
   .post-item {
     flex-direction: column-reverse;
     padding-bottom: 16px;
-    margin-bottom: 16x;
+    margin: 0;
 
     .right {
       width: 100%;
@@ -531,10 +548,19 @@ a {
     }
 
     .left {
-      .post-date {
-        font-size: 16px;
-        padding: 16px 0;
+      .article-header {
+        display: block;
+
+        .post-title {
+          font-size: 16px;
+        }
+
+        .post-date {
+          font-size: 16px;
+          padding: 16px 0;
+        }
       }
+
 
       .post-abstract {
         font-size: 16px;
@@ -554,7 +580,7 @@ a {
 
   .post-detail {
     .post-title {
-      font-size: 28px;
+      font-size: 16px;
     }
 
     .post-date {
